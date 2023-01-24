@@ -25,7 +25,7 @@
 
         <!-- Input tag & button-->
         <div class="researchBox">
-            <input v-model="newDo" type="text" placeholder="Inserisci nuovo obbietivo">
+            <input v-model="newDo" type="text" placeholder="Inserisci nuovo obbietivo" @keyup.enter="addElement()">
             <button @click="addElement()" class="add">
                   Aggiungi
             </button>
