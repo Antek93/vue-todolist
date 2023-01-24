@@ -6,17 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Insert title</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/d67383daac.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Kavoon&display=swap" rel="stylesheet">
+
+    
+
 </head>
 <body>
-
-    <div id="app">
-        <div>
-            {{ greeting }}
+    <!-- Vue -->
+    <div id="app" class="box">
+        
+        <!-- Titolo con immagine Boolean -->
+        <div class="logo">
+            <img src="img/logo.png" alt="">
         </div>
-        <div>
-            {{ functionExample() }}
+
+        <!-- Input tag & button-->
+        <div class="researchBox">
+            <input type="text" placeholder="Inserisci nuovo obbietivo">
+            <button class="add">
+                  Aggiungi
+            </button>
+        </div>
+        
+        <!-- Contenitore obbiettivi -->
+        <div class="task-box">
+            <ul>
+                <li class="obiettivo">
+                    Prima task
+                    <i class="fas fa-times"></i>
+                </li>
+            </ul>
         </div>
     </div>
+
     
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
