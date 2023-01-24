@@ -67,3 +67,7 @@
 .obiettivo i {
     float: right;
 }
+
+.crossed {
+    text-decoration: line-through;
+}

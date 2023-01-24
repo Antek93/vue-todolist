@@ -6,18 +6,42 @@ const { createApp } = Vue;
 
 createApp({
     data() {
-        return {
-            greeting: 'Ciao Antonio',
-            oggetto: {
-                esempio1: 'Ciao',
-                esempio2: 'Come va?'
-            }
+        return { 
+            active: 0,
+            
+            newDo: '',
+            toDo: [ {
+                text: "Fare l'esercizio",
+                done: false
+            },{
+                text: "Rifare il letto",
+                done: false
+            },{
+                text: "Lavare la macchina",
+                done: false
+            },
+        ]
         }
     },
     methods: {
-        functionExample: function () {
-            return  console.log('I am Vue and I am working properly');
+        cross: function (index) {
+
+            this.toDo[index].done = !this.toDo[index].done
+
+            return
+
         },
+        addElement: function () {
+
+            this.toDo.push({text: this.newDo, done: false});
+            this.newDo = '';
+
+            return ;
+        },
+        removeElement: function () {
+
+            this.toDo.splice(1, )
+        }
         
     }
 }).mount('#app');

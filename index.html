@@ -25,19 +25,24 @@
 
         <!-- Input tag & button-->
         <div class="researchBox">
-            <input type="text" placeholder="Inserisci nuovo obbietivo">
-            <button class="add">
+            <input v-model="newDo" type="text" placeholder="Inserisci nuovo obbietivo">
+            <button @click="addElement()" class="add">
                   Aggiungi
             </button>
         </div>
         
         <!-- Contenitore obbiettivi -->
         <div class="task-box">
-            <ul>
-                <li class="obiettivo">
-                    Prima task
+            <ul>                          <!-- all'interno delle graffe inseriamo l'attributo di css crossed se Element.done = true  -->
+                                                      <!-- ↓↓↓↓↓↓↓↓ -->
+
+                <li  @click="cross(index)" :class="{crossed:element.done}" v-for="(element, index) in toDo" class="obiettivo" >
+
+                    {{ element.text }}
                     <i class="fas fa-times"></i>
+
                 </li>
+                
             </ul>
         </div>
     </div>
