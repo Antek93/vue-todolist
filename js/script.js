@@ -41,18 +41,24 @@ createApp({
             return
 
         },
+
         addElement: function () {
+
             if (this.newDo != 0)  {
 
                 this.toDo.push({text: this.newDo, done: false});
                 this.newDo = '';
+
             } else {
+
                 alert('Cannot insert empty content')
+
             }
            
 
             return ;
         },
+        
         removeElement: function (index) {
 
             this.toDo.splice(index, 1)
