@@ -6,9 +6,7 @@ const { createApp } = Vue;
 
 createApp({
     data() {
-        return { 
-            active: 0,
-            
+        return {
             newDo: '',
             toDo: [ {
                 text: "Fare l'esercizio",
@@ -28,6 +26,18 @@ createApp({
 
             this.toDo[index].done = !this.toDo[index].done
 
+            //this.toDo[index].done        ↑
+            //ogni elemento done è         ↑
+            //impostato su false           ↑
+                             
+            //quando si attiva             ↑
+            //la funzione cross            ↑
+            //scambiamo il valore di       ↑
+            //done con il suo opposto      ↑
+            //utilizzando la negazione !   ↑
+
+            //cosi facendo, ogni qualvolta attiviamo la funzione, i due valori vengono scambiati
+
             return
 
         },
@@ -38,9 +48,9 @@ createApp({
 
             return ;
         },
-        removeElement: function () {
+        removeElement: function (index) {
 
-            this.toDo.splice(1, )
+            this.toDo.splice(index, 1)
         }
         
     }

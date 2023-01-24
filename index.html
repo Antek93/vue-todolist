@@ -39,7 +39,7 @@
                 <li  @click="cross(index)" :class="{crossed:element.done}" v-for="(element, index) in toDo" class="obiettivo" >
 
                     {{ element.text }}
-                    <i class="fas fa-times"></i>
+                    <i class="fas fa-times" @click="removeElement(index)"></i>
 
                 </li>
                 
